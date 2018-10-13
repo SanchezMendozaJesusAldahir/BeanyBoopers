@@ -1,5 +1,15 @@
 # depslib dependency file v1.0
-1539417073 source:c:\users\jesus\documents\beanyboopers\main.cpp
-	<graphics.h>
+1539469355 source:c:\users\jesus\documents\beanyboopers\main.cpp
 	<conio.h>
+	<winbgim.h>
+	"Bresenham.h"
+	"Cuadrado.h"
+
+1539463761 c:\users\jesus\documents\beanyboopers\bresenham.h
+	<conio.h>
+	<winbgim.h>
+
+1539469400 c:\users\jesus\documents\beanyboopers\cuadrado.h
+	"Bresenham.h"
+	<iostream>
 

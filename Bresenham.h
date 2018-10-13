@@ -6,13 +6,13 @@
 class Bresenham {
 
     public:
-        void trazarLinea( int xInicial, int yInicial, int xFinal, int yFinal );
-        void trazarCirculo( int x, int y, int radio );
-        void coordenadas(int xc, int yc, int x, int y);
+        void trazarLinea( int xInicial, int yInicial, int xFinal, int yFinal, int color );
+        void trazarCirculo( int x, int y, int radio, int color );
+        void coordenadas(int xc, int yc, int x, int y, int color);
     private:
 };
 
-void Bresenham::trazarLinea( int _xInicial, int _yInicial, int _xFinal, int _yFinal ) {
+void Bresenham::trazarLinea( int _xInicial, int _yInicial, int _xFinal, int _yFinal, int color ) {
 
     int x, y, dx, dy, p,stepx, stepy;
 
@@ -29,7 +29,7 @@ void Bresenham::trazarLinea( int _xInicial, int _yInicial, int _xFinal, int _yFi
 
     x = _xInicial;
     y = _yInicial;
-    putpixel(x,y,15);
+    putpixel(x,y,color);
 
     if( dx > dy ){ // x incrementara mas que Y
         p = 2 * dy - dx; // calculamos el punto de desicion
@@ -42,7 +42,7 @@ void Bresenham::trazarLinea( int _xInicial, int _yInicial, int _xFinal, int _yFi
             y = y + stepy;
             p = p + 2*( dy -dx );
           }
-           putpixel( x, y, 15 ); // pintamos el otro punto a graficar
+           putpixel( x, y, color ); // pintamos el otro punto a graficar
         }
     }
     else {
@@ -56,18 +56,18 @@ void Bresenham::trazarLinea( int _xInicial, int _yInicial, int _xFinal, int _yFi
             x = x + stepx;
             p = p + 2*(dx-dy);
           }
-          putpixel( x, y, 15 );
+          putpixel( x, y, color );
         }
     }
 }
 
-void Bresenham::trazarCirculo( int xc, int yc, int r ) {
+void Bresenham::trazarCirculo( int xc, int yc, int r, int color ) {
 
   int x, y, p;
   x = 0;
   y = r;
   p = 1 - r;
-  coordenadas(xc,yc,x,y);
+  coordenadas(xc,yc,x,y,color);
 /* se cicla hasta trazar todo un octante */
   while (x < y) {
     x = x + 1;
@@ -77,19 +77,19 @@ void Bresenham::trazarCirculo( int xc, int yc, int r ) {
       y = y - 1;
       p = p + 2*(x - y) + 1;
     }
-    coordenadas(xc,yc,x,y);
+    coordenadas(xc,yc,x,y,color);
   }
 }
 
-void Bresenham::coordenadas(int xc, int yc, int x, int y) {
-    putpixel(xc + x,yc + y,15);
-    putpixel(xc - x,yc + y,15);
-    putpixel(xc + x,yc - y,15);
-    putpixel(xc - x,yc - y,15);
-    putpixel(xc + x,yc + y,15);
-    putpixel(xc - x,yc + y,15);
-    putpixel(xc + y,yc - x,15);
-    putpixel(xc - y,yc - x,15);
+void Bresenham::coordenadas(int xc, int yc, int x, int y, int color) {
+    putpixel(xc + x,yc + y,color);
+    putpixel(xc - x,yc + y,color);
+    putpixel(xc + x,yc - y,color);
+    putpixel(xc - x,yc - y,color);
+    putpixel(xc + x,yc + y,color);
+    putpixel(xc - x,yc + y,color);
+    putpixel(xc + y,yc - x,color);
+    putpixel(xc - y,yc - x,color);
 }
 
 #endif

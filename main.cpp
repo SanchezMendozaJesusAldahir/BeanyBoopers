@@ -1,15 +1,17 @@
 #include <conio.h>
 #include <winbgim.h>
 #include "Bresenham.h"
+#include "Cuadrado.h"
 int main()
 {
     initwindow (600,400);
-    Bresenham b;
-    setcolor(15);
-    //setlinestyle(1, 0, 1);
-    //putpixel(100,8,15);
-    //bar(10, 10, 50, 50);
-    b.trazarLinea(0,0,30,40);
+    Cuadrado c( 100,100,150,150);
+    c.dibujar();
+    Cuadrado a(300,100,150,150);
+    a.dibujar();
+    a.moverX(100);
+    a.color = 0;
+    a.dibujar();
     getch();
     closegraph();
 }
