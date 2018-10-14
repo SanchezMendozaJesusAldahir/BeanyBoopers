@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="Bresenham.h" />
 		<Unit filename="Cuadrado.h" />
+		<Unit filename="Jugador.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

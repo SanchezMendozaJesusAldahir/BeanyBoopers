@@ -33,8 +33,10 @@ int main(void)
 
 void *figuras( void  *z )
 {
-    Jugador j;
-    j.crearNave();
+    Jugador jg;
+    jg.crearNave();
+    //El metid kbnit() esta en conio.
+
 
     Cuadrado c( 250,150,100,130);
     c.setColor(15);
@@ -58,8 +60,17 @@ void *figuras( void  *z )
         c.setColor(15);
         c.dibujar();
 
+
+        if( kbhit() )
+   		{
+   			char tecla = getch();
+   			if(tecla == 72)
+                break;
+   				//jg.moverNaveArriba(1);
+        }
+
         Sleep(50);
-        cout << a.getY();
+        //cout << a.getY();
         if( c.getY() == 160 && a.getY() == 160 ) {
 
             p.setColor(0);
