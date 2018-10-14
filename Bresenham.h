@@ -6,9 +6,9 @@
 class Bresenham {
 
     public:
-        void trazarLinea( int xInicial, int yInicial, int xFinal, int yFinal, int color );
-        void trazarCirculo( int x, int y, int radio, int color );
-        void coordenadas(int xc, int yc, int x, int y, int color);
+        void trazarLinea( int , int , int , int , int  );
+        void trazarCirculo( int , int , int , int  );
+        void coordenadas(int , int , int , int , int );
     private:
 };
 
