@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Bresenham.h"
 #include "Cuadrado.h"
+#include "Jugador.h"
+
 using namespace std;
 
 void *figuras( void *a);
@@ -18,12 +20,22 @@ int main(void)
     pthread_t hilo1;
     pthread_create( &hilo1, NULL, &figuras, (void *) "" );
     pthread_join(hilo1, NULL);
+
+
+
     getch();
     closegraph();
+
+
+
 }
 
 
-void *figuras( void  *z ) {
+void *figuras( void  *z )
+{
+    Jugador j;
+    j.crearNave();
+
     Cuadrado c( 250,150,100,130);
     c.setColor(15);
     c.dibujar();
@@ -32,7 +44,8 @@ void *figuras( void  *z ) {
     a.setColor(15);
     a.dibujar();
     Cuadrado p( 250,0,50,40);
-    while( true ) {
+    while( true )
+    {
         a.setColor(0);
         a.dibujar();
         a.trasladarY(2);
@@ -58,4 +71,5 @@ void *figuras( void  *z ) {
             p.dibujar();
         }
     }
+
 }
