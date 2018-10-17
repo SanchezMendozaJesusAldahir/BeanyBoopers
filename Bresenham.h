@@ -1,8 +1,7 @@
 #ifndef BRESENHAM_H
 #define BRESENHAM_H
-
 #include <conio.h>
-#include <winbgim.h>
+#include <graphics.h>
 class Bresenham {
 
     public:

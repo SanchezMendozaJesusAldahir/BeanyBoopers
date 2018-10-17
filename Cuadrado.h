@@ -24,7 +24,11 @@ Cuadrado::Cuadrado( int x, int y, int _ancho, int _altura ) {
 void Cuadrado::dibujar() {
     Bresenham s;
     s.trazarLinea( x1, y1, ancho + x1, y1, color );
+    s.trazarLinea( x1, y1, ancho + x1, y1, color );
     s.trazarLinea( x1, y1, x1, altura + y1, color );
+    s.trazarLinea( x1, y1, x1, altura + y1, color );
+    s.trazarLinea( x1, altura + y1, ancho + x1, altura + y1, color );
+    s.trazarLinea( ancho + x1 , altura + y1, ancho + x1, y1, color );
     s.trazarLinea( x1, altura + y1, ancho + x1, altura + y1, color );
     s.trazarLinea( ancho + x1 , altura + y1, ancho + x1, y1, color );
 }

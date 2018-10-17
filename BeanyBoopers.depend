@@ -1,15 +1,30 @@
 # depslib dependency file v1.0
-1539488666 source:c:\users\jesus\documents\beanyboopers\main.cpp
+1539773530 source:c:\users\jesus\documents\beanyboopers\main.cpp
 	<conio.h>
-	<winbgim.h>
+	<graphics.h>
+	<pthread.h>
+	<iostream>
+	<list>
+	<stdlib.h>
+	<time.h>
+	<stdio.h>
 	"Bresenham.h"
 	"Cuadrado.h"
+	"Tablero.h"
+	"Puntos.h"
 
-1539484093 c:\users\jesus\documents\beanyboopers\bresenham.h
+1539563214 c:\users\jesus\documents\beanyboopers\bresenham.h
 	<conio.h>
-	<winbgim.h>
+	<graphics.h>
 
-1539488396 c:\users\jesus\documents\beanyboopers\cuadrado.h
+1539773781 c:\users\jesus\documents\beanyboopers\cuadrado.h
 	"Bresenham.h"
 	<iostream>
+
+1539541483 c:\users\jesus\documents\beanyboopers\tablero.h
+	<list>
+
+1539773514 c:\users\jesus\documents\beanyboopers\puntos.h
+	"Bresenham.h"
+	<conio.h>
 
