@@ -5,37 +5,41 @@
 #include "Bresenham.h"
 #include "Cuadrado.h"
 #include "Jugador.h"
+#include "NaveEnemiga.h"
+#include "FiguraPuntos.h"
+
 
 using namespace std;
 
-void *figuras( void *a);
+void figuras();
 
 int main(void)
 {
+
     initwindow (900,600);
     Cuadrado m( 40,40,800,500);
     m.setColor(2);
+
     m.dibujar();
 
-    pthread_t hilo1;
-    pthread_create( &hilo1, NULL, &figuras, (void *) "" );
-    pthread_join(hilo1, NULL);
 
 
+figuras();
 
     getch();
     closegraph();
-
-
-
 }
 
-
-void *figuras( void  *z )
+void figuras( )
 {
     Jugador jg;
+    FiguraPuntos fp;
+    NaveEnemiga naem;
     jg.crearNave();
+    fp.fPuntos();
+    naem.figuraEnemiga();
     //El metid kbnit() esta en conio.
+
 
 
     Cuadrado c( 250,150,100,130);
@@ -65,13 +69,17 @@ void *figuras( void  *z )
    		{
    			char tecla = getch();
    			if(tecla == 72)
-                break;
-   				//jg.moverNaveArriba(1);
+                {
+                    jg.moverNaveArriba();
+   				    cout<<"puto";
+                }
+
         }
 
         Sleep(50);
         //cout << a.getY();
-        if( c.getY() == 160 && a.getY() == 160 ) {
+        if( c.getY() == 160 && a.getY() == 160 )
+        {
 
             p.setColor(0);
             p.dibujar();
@@ -84,3 +92,4 @@ void *figuras( void  *z )
     }
 
 }
+

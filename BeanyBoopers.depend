@@ -13,7 +13,7 @@
 	"Bresenham.h"
 	<iostream>
 
-1539547845 source:c:\users\arnold\documents\c++\beanyboopers\main.cpp
+1539761734 source:c:\users\arnold\documents\c++\beanyboopers\main.cpp
 	<conio.h>
 	<winbgim.h>
 	<pthread.h>
@@ -21,6 +21,8 @@
 	"Bresenham.h"
 	"Cuadrado.h"
 	"Jugador.h"
+	"NaveEnemiga.h"
+	"FiguraPuntos.h"
 
 1539509544 c:\users\arnold\documents\c++\beanyboopers\bresenham.h
 	<conio.h>
@@ -30,7 +32,17 @@
 	"Bresenham.h"
 	<iostream>
 
-1539546689 c:\users\arnold\documents\c++\beanyboopers\jugador.h
+1539767757 c:\users\arnold\documents\c++\beanyboopers\jugador.h
+	"Bresenham.h"
+	<conio.h>
+	<winbgim.h>
+
+1539761203 c:\users\arnold\documents\c++\beanyboopers\naveenemiga.h
+	"Bresenham.h"
+	<conio.h>
+	<winbgim.h>
+
+1539761246 c:\users\arnold\documents\c++\beanyboopers\figurapuntos.h
 	"Bresenham.h"
 	<conio.h>
 	<winbgim.h>
